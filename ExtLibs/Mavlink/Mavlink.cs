@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 public partial class MAVLink
 {
-    public const string MAVLINK_BUILD_DATE = "Tue Apr 25 2017";
+    public const string MAVLINK_BUILD_DATE = "Mon May 15 2017";
     public const string MAVLINK_WIRE_PROTOCOL_VERSION = "2.0";
     public const int MAVLINK_MAX_PAYLOAD_LEN = 255;
 
@@ -194,6 +194,7 @@ public partial class MAVLink
 		new message_info(192, "MAG_CAL_REPORT", 36, 44, 44, typeof( mavlink_mag_cal_report_t )),
 		new message_info(193, "EKF_STATUS_REPORT", 71, 22, 22, typeof( mavlink_ekf_status_report_t )),
 		new message_info(194, "PID_TUNING", 98, 25, 25, typeof( mavlink_pid_tuning_t )),
+		new message_info(197, "AQMM_MEASUREMENT", 88, 64, 64, typeof( mavlink_aqmm_measurement_t )),
 		new message_info(200, "GIMBAL_REPORT", 134, 42, 42, typeof( mavlink_gimbal_report_t )),
 		new message_info(201, "GIMBAL_CONTROL", 205, 14, 14, typeof( mavlink_gimbal_control_t )),
 		new message_info(214, "GIMBAL_TORQUE_CMD_REPORT", 69, 8, 8, typeof( mavlink_gimbal_torque_cmd_report_t )),
@@ -437,6 +438,7 @@ MAG_CAL_PROGRESS = 191,
 MAG_CAL_REPORT = 192,
 EKF_STATUS_REPORT = 193,
 PID_TUNING = 194,
+AQMM_MEASUREMENT = 197,
 GIMBAL_REPORT = 200,
 GIMBAL_CONTROL = 201,
 GIMBAL_TORQUE_CMD_REPORT = 214,
@@ -6530,6 +6532,17 @@ AOA_SSA = 11020,
         public  byte target_num;
             /// <summary> MAV_FRAME enum specifying the whether the following feilds are earth-frame, body-frame, etc. MAV_FRAME</summary>
         public  /*MAV_FRAME*/byte frame;
+    
+    };
+
+
+    [StructLayout(LayoutKind.Sequential,Pack=1,Size=64)]
+    ///<summary> This message contains measurements from sensors </summary>
+    public struct mavlink_aqmm_measurement_t
+    {
+        /// <summary> Sensors mearurements </summary>
+        [MarshalAs(UnmanagedType.ByValArray,SizeConst=16)]
+		public int[] measurements;
     
     };
 
