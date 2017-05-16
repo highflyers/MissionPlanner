@@ -10,6 +10,7 @@ using MissionPlanner;
 using System.Collections;
 using System.Linq;
 using DirectShowLib;
+using WebSocketSender;
 
 namespace MissionPlanner
 {
@@ -2395,6 +2396,9 @@ namespace MissionPlanner
                             displayString += "]";
                             System.Diagnostics.Debug.WriteLine(displayString);
                             System.Console.Out.WriteLine(displayString);
+
+                            WebSocketSender.MessageManager.Instance.HandleMessage(new WebSocketSender.AqmmMessage());
+
                             aqmm_last_timestamp = currentTimestamp;
                         }
                     }

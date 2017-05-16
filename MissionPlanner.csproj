@@ -4672,6 +4672,10 @@
       <Name>ZedGraph</Name>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
+    <ProjectReference Include="WebSocketSender\WebSocketSender.csproj">
+      <Project>{1d5e0dba-9864-432e-84cc-3ab7f222a7b2}</Project>
+      <Name>WebSocketSender</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\" />
