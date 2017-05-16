@@ -37,5 +37,15 @@ namespace WebSocketSender
         {
             wsSender.SendMessage(message);
         }
+
+        public void SetConnectionParameters(string address, string port)
+        {
+            wsSender.SetConnectionParameters(address, port);
+        }
+
+        public int QueueSize()
+        {
+            return wsSender.QueueSize();
+        }
     }
 }

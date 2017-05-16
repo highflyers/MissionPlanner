@@ -35,6 +35,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.PIC_wizard = new System.Windows.Forms.PictureBox();
             this.BUT_betaupdate = new MissionPlanner.Controls.MyButton();
+            this.webSocketConfig1 = new MissionPlanner.GCSViews.WebSocketConfig();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_wizard)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,9 +82,15 @@
             this.BUT_betaupdate.UseVisualStyleBackColor = true;
             this.BUT_betaupdate.Click += new System.EventHandler(this.BUT_betaupdate_Click);
             // 
+            // webSocketConfig1
+            // 
+            resources.ApplyResources(this.webSocketConfig1, "webSocketConfig1");
+            this.webSocketConfig1.Name = "webSocketConfig1";
+            // 
             // Help
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.webSocketConfig1);
             this.Controls.Add(this.BUT_betaupdate);
             this.Controls.Add(this.PIC_wizard);
             this.Controls.Add(this.linkLabel1);
@@ -107,6 +114,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox PIC_wizard;
         private Controls.MyButton BUT_betaupdate;
-
+        private WebSocketConfig webSocketConfig1;
     }
 }

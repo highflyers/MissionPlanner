@@ -434,6 +434,12 @@
     <Compile Include="GCSViews\ConfigurationView\ConfigGPSInject.Designer.cs">
       <DependentUpon>ConfigGPSInject.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\WebSocketConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\WebSocketConfig.Designer.cs">
+      <DependentUpon>WebSocketConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Log\LogDownloadscp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2647,6 +2653,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Terminal.zh-TW.resx">
       <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\WebSocketConfig.resx">
+      <DependentUpon>WebSocketConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeoRef\Georefimage.ar.resx">
       <DependentUpon>georefimage.cs</DependentUpon>
