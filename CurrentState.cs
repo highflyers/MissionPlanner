@@ -2397,7 +2397,7 @@ namespace MissionPlanner
                             System.Diagnostics.Debug.WriteLine(displayString);
                             System.Console.Out.WriteLine(displayString);
 
-                            WebSocketSender.MessageManager.Instance.HandleMessage(new WebSocketSender.AqmmMessage());
+                            WebSocketSender.MessageManager.Instance.HandleMessage(new WebSocketSender.AqmmMessage(currentTimestamp,2,3,aqmm.measurements));
 
                             aqmm_last_timestamp = currentTimestamp;
                         }
